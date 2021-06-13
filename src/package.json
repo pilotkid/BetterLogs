@@ -1,0 +1,21 @@
+{
+  "name": "betterlogs",
+  "version": "0.0.1",
+  "description": "A different logger for express, that uses mongodb",
+  "main": "index.js",
+  "scripts": {
+    "serve": "nodemon ./demo/index.js"
+  },
+  "keywords": [
+    "logger",
+    "mongodb",
+    "error",
+    "logger",
+    "errors"
+  ],
+  "author": "Marcello Bachechi",
+  "license": "ISC",
+  "dependencies": {
+    "mongoose": "^5.12.13"
+  }
+}
