@@ -37,7 +37,7 @@ jobs:
         working-directory: ./src
         with:
           node-version: 12
-          registry-url: https://registry.npmjs.org/      
+          registry-url: https://www.npmjs.com/package/express-mongo-logger 
       - run: npm ci 
       - run: npm publish  --access public
         env:
