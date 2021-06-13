@@ -19,8 +19,8 @@ jobs:
       - uses: canastro/copy-file-action@master
         with:
           node-version: 12
-          source: "README.md"
-          target: "./src/README.MD"
+          source: "../README.md"
+          target: "./README.MD"
       - run: npm ci
       - run: npm test      
         
@@ -36,8 +36,8 @@ jobs:
       - uses: canastro/copy-file-action@master
         with:
           node-version: 12
-          source: "README.md"
-          target: "./src/README.MD"                
+          source: "../README.md"
+          target: "./README.MD"         
           registry-url: https://registry.npmjs.org/
       - run: npm ci
       - run: npm publish
