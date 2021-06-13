@@ -8,7 +8,7 @@ An example of a logged document with all features enabled can be found [here](/E
 
 ## Getting Started
 
-Run `npm i ExpressMongoLogger`
+Run `npm i express-mongo-logger`
 
 ```js
 var mongoLogger = require("../Index.js");

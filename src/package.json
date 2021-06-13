@@ -1,5 +1,5 @@
 {
-  "name": "betterlogs",
+  "name": "express-mongo-logger",
   "version": "0.0.1",
   "description": "A different logger for express, that uses mongodb",
   "main": "index.js",
@@ -11,7 +11,8 @@
     "mongodb",
     "error",
     "logger",
-    "errors"
+    "errors",
+    "express"
   ],
   "author": "Marcello Bachechi",
   "license": "ISC",
