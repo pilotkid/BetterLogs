@@ -11,6 +11,7 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 10
+      - run: copy ./README.md ./src/README.md
       - run: cd ./src && npm install && cd ..
       - run: cd ./src && npm version ${GITHUB_REF##*/} && cd ..
       - uses: JS-DevTools/npm-publish@v1
