@@ -1,4 +1,7 @@
-on: push
+on:
+   release:
+    types: # This configuration does not affect the page_build event above
+      - created
 
 jobs:
   publish:
@@ -13,5 +16,5 @@ jobs:
       - run: npm version ${GITHUB_REF##*/}
       - uses: JS-DevTools/npm-publish@v1
         with:
-          token: ${{ secrets.NPM_TOKEN }}
           package: "./src/package.json"
+          token: ${{ secrets.NPM_TOKEN }}
