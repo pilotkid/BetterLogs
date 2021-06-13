@@ -1,6 +1,6 @@
 {
   "name": "express-mongo-logger",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A different logger for express, that uses mongodb",
   "main": "index.js",
   "scripts": {
