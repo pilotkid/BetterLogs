@@ -27,16 +27,17 @@ jobs:
   publish-npm:
     needs: build
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./src    
     steps:
       - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        working-directory: ./src
+        with:
+          node-version: 12
+          registry-url: https://registry.npmjs.org/
       - uses: canastro/copy-file-action@master
         with:          
           source: "./README.md"
-          target: "./src/README.MD"         
-          registry-url: https://registry.npmjs.org/
+          target: "./src/README.md"          
       - run: npm ci
       - run: npm publish
         env:
