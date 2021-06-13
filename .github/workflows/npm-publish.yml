@@ -16,10 +16,14 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2        
+      - uses: canastro/copy-file-action@master
         with:
           node-version: 12
+          source: "README.md"
+          target: "./src/README.MD"
       - run: npm ci
-      - run: npm test
+      - run: npm test      
+        
 
   publish-npm:
     needs: build
@@ -29,9 +33,11 @@ jobs:
         working-directory: ./src    
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2        
+      - uses: canastro/copy-file-action@master
         with:
           node-version: 12
+          source: "README.md"
+          target: "./src/README.MD"                
           registry-url: https://registry.npmjs.org/
       - run: npm ci
       - run: npm publish
