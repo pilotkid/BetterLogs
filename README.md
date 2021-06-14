@@ -11,7 +11,7 @@ An example of a logged document with all features enabled can be found [here](/E
 Run `npm i express-mongo-logger`
 
 ```js
-var mongoLogger = require("../Index.js");
+var mongoLogger = require("express-mongo-logger");
 var express = require("express");
 var app = express();
 
