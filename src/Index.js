@@ -120,9 +120,11 @@ function mongoLogger(settings = {}) {
 
 				//IF ENABLED RETURN THE ERROR OR CONTINUE
 				if (settings.returnError)
-					res
-						.status(500)
-						.send("An error has occured. Please contact the webmaster");
+					if (!res.headersSent)
+						res
+							.status(500)
+							.send("An error has occured. Please contact the webmaster");
+					else next(reason);
 				else next(reason);
 			});
 			next();
@@ -142,9 +144,11 @@ function mongoLogger(settings = {}) {
 
 			//IF ENABLE RETURN THE ERROR
 			if (settings.returnError)
-				res
-					.status(500)
-					.send("An error has occured. Please contact the webmaster");
+				if (!res.headersSent)
+					res
+						.status(500)
+						.send("An error has occured. Please contact the webmaster");
+				else next(reason);
 			else next(err);
 		},
 	];
