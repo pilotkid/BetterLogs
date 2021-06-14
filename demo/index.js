@@ -6,7 +6,7 @@ app.use(
 	mongoLogger({
 		minStatusCode: 400,
 		mongoConnectionString:
-			"mongodb://admin:Z2d3*mNs##Yy@172.104.192.106:49376/test?authSource=test&readPreference=primary&appname=MongoDB%20Compass&ssl=false",
+			"mongodb://admin:admin@localhost:49376/test?authSource=test&readPreference=primary&appname=MongoDB%20Compass&ssl=false",
 	})
 );
 
